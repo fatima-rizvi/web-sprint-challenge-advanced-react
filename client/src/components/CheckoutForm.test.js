@@ -36,5 +36,11 @@ test("form shows success message on submit with form details", async () => {
     const renderSuccessTwo = await screen.getByText(/Your new green friends will be shipped to:/i);
     const renderFullName = await screen.getByText(/Fatima Rizvi/i);
     const renderAddressLineOne = await screen.getByText(/4545 Wavertree Dr/i);
-    const renderAdressLineTwo = await screen.getByText(/Sugarland, TX 95477/i)
+    const renderAddressLineTwo = await screen.getByText(/Sugarland, TX 95477/i)
+    //Check that the message rendered
+    expect(renderSuccessOne).toBeInTheDocument();
+    expect(renderSuccessTwo).toBeInTheDocument();
+    expect(renderFullName).toBeInTheDocument();
+    expect(renderAddressLineOne).toBeInTheDocument();
+    expect(renderAddressLineTwo).toBeInTheDocument();
 });
