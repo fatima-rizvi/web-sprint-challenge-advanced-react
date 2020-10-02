@@ -18,8 +18,8 @@ export default class PlantList extends Component {
     fetch('http://localhost:3333/plants')
       .then((res) => res.json())
       .then((data) => {
-        console.log("Returned from api", data)
-        console.log("Plant data", data.plantsData)
+        //console.log("Returned from api", data)
+        //console.log("Plant data", data.plantsData)
         this.setState({
           plants: data.plantsData
       })
