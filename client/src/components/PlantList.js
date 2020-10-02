@@ -15,13 +15,15 @@ export default class PlantList extends Component {
   };
 
   fetchPlants = () =>  {
-    fecth('http://localhost:3333/plants')
-      .then((res) => {
-        console.log("Returned from api", res.data)
+    fetch('http://localhost:3333/plants')
+      .then((res) => res.json())
+      .then((data) => {
+        console.log("Returned from api", data)
+        console.log("Plant data", data.plantsData)
         this.setState({
-          plants: this.state.plants
-        })
+          plants: data.plantsData
       })
+    })
   }
 
   /*********  DON'T CHANGE ANYTHING IN THE RENDER FUNCTION *********/
