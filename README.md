@@ -30,13 +30,31 @@ Be prepared to demonstrate your understanding of this week's concepts by answeri
 
 1. Explain how to build stateful class components.
 
+  Instead of the way we make functional components, you need to create a class. Inside the class define an initial state for the properties you want to have. After that, you'll set blocks of code to run during different phases of the component life cycle, such as a block that runs when the component first mounts or one that runs when the component updates.
+
 2. Describe the different phases of the component lifecycle.
+  
+  The three phases are mounting, updating, and unmounting. Mounting is where the component is being built, updating is when the component data is being updated, and unmounting is when the component is removed from the screen
 
 3. Demonstrate an understanding of class component lifecycle methods.
 
+  Mounting: 
+    - if used, the constructor is called
+    - render method is invoked
+    - componentDidMount is called
+  Updating:
+    - setState canchange the component's data/state
+    - componentDidUpdate is called
+  Unmounting:
+    - componentWillUnmount is called
+
 4. Define stateful logic.
 
+  Stateful logic is the logic built into the component that deals with the state in the component.. It involves things like functions that handle changes or click events, such as a handleChanges function or handleSubmit.
+
 5. Describe how to test a React component with React Testing Library.
+
+  There are three steps to testing after you've imported everythin you need (such as the component being testes and hings like react, screen, fireEvent, etc). Those steps are arrange, act, and assert. Arrange is when you render the component being tested into a virtual DOM. Act is when you query the DOM to find the specific elements or things you're looking for, the specific nodes. Assert is where you check to make sure the thing that needs to be rendered, for example the success message, has actually rendered and is displaying the correct information.
 
 You are expected to be able to answer questions in these areas. Your responses contribute to your Sprint Challenge grade.
 
